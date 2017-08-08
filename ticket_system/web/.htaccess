@@ -1,0 +1,12 @@
+#AuthName "wersja Alpha strony kurii"
+#AuthUserFile /var/www/.htpasswd
+#AuthType basic
+#Require valid-user
+
+#php_value allow_url_fopen On
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule . index.php
